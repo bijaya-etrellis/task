@@ -1,0 +1,15 @@
+<div id="delivery-date">
+    <strong><?php echo __('Ship Date') ?></strong>
+    <span class="price"><?=$block->getDeliveryDate() ?></span>
+</div>
+<script type="text/javascript">
+    require(
+        ['jquery'],
+        function($) {
+            var element = $('#delivery-date').detach();
+            $('.box-order-shipping-method').append(element);
+            var element = $('#delivery-comment').detach();
+            $('.box-order-shipping-method').append(element);
+        }
+    );
+</script>
